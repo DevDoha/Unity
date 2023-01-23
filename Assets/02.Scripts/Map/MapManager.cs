@@ -13,12 +13,15 @@ public class MapManager : MonoBehaviour
     [Tooltip("땅 지형의 타일맵 컴포넌트")]
     [SerializeField] private Tilemap GroundTileMap;
 
+    //육각 타일맵의 좌표는 다음을 따랐습니다. 이 좌표는 tileList[*,*]의 인덱스 값이 됩니다.
+    //https://docs.unity3d.com/kr/2021.3/Manual/Tilemap-Hexagonal.html
+
     /// <summary>
     /// 땅에 배치된 타일의 클래스
     /// </summary>
     public class GroundTile
     {
-        public TileInfo info; //타일의 기본정보
+        public TileInfo info; //이 타일종류의 정보
 
         public bool isOwned = false;
         // +나중에 속한 팀을 의미하는 필드를 추가하게 될 듯
@@ -83,7 +86,7 @@ public class MapManager : MonoBehaviour
         {
             for (int j = 0; j < column; j++)
             {
-                tileList[i, j].info = TileInfoList[0];
+                tileList[i, j] = new GroundTile() { info = TileInfoList[0] };
                 GroundTileMap.SetTile(new Vector3Int(i, j, 0), tileList[i, j].info.TileObject);
             }
         }
@@ -98,8 +101,9 @@ public class MapManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(CurrentMouseOverlayTile.info.Type);
-            Debug.Log(CurrentMouseOverlayTile.Productivity);
+            Debug.Log("타일 종류 : " + CurrentMouseOverlayTile.info.Type);
+            Debug.Log("타일 생산포인트 : " + CurrentMouseOverlayTile.Productivity);
+            Debug.Log("-------------------");
         }
     }
 }
