@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113570842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileInfoList:
+  - {fileID: 11400000, guid: dc3a660133bd3d548a0924c5786193dc, type: 2}
   - {fileID: 11400000, guid: 50b525a62b7fae34c82df00944536e6f, type: 2}
   - {fileID: 11400000, guid: 7d8afd38d13eccf4da4ba6c6aa473273, type: 2}
   - {fileID: 11400000, guid: 69e0ec6c67298e1449695f0824b85ff8, type: 2}
@@ -283,7 +284,6 @@ GameObject:
   - component: {fileID: 1427109312}
   - component: {fileID: 1427109315}
   - component: {fileID: 1427109314}
-  - component: {fileID: 1427109313}
   - component: {fileID: 1427109316}
   m_Layer: 0
   m_Name: Ground
@@ -307,18 +307,6 @@ Transform:
   m_Father: {fileID: 113570844}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1427109313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427109311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358365a40b912034fab9d5aaa4f7df4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!483693784 &1427109314
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -391,32 +379,32 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: -1.0142631e-26
+      e00: -0.00001663214
       e01: 0
-      e02: 1.8295932e-19
-      e03: 1.8295932e-19
-      e10: 1.055e-42
+      e02: -3.3750038
+      e03: -3.3750038
+      e10: 8.03e-43
       e11: 0
-      e12: 1.052e-42
-      e13: 1.052e-42
-      e20: 9.748591e-12
+      e12: 7.99e-43
+      e13: 7.99e-43
+      e20: 2.086491e-36
       e21: 1e-45
-      e22: -2.387543e-19
-      e23: -3.759577e+19
-      e30: 4.5905e-41
+      e22: 2.4607734e-19
+      e23: 8.775729e+9
+      e30: 4.5904e-41
       e31: 0
-      e32: 1.052e-42
-      e33: 1.055e-42
+      e32: 8e-43
+      e33: 8.03e-43
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: 3.4245e-41, g: 3.4245e-41, b: 3.4245e-41, a: 3.4245e-41}
   - m_RefCount: 0
-    m_Data: {r: 3.4245e-41, g: 3.4245e-41, b: 3.4245e-41, a: 3.4245e-41}
+    m_Data: {r: 3.424e-41, g: 3.424e-41, b: 3.424e-41, a: 3.424e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -7, y: -5, z: 0}
-  m_Size: {x: 14, y: 10, z: 1}
+  m_Origin: {x: -8, y: -5, z: 0}
+  m_Size: {x: 15, y: 10, z: 1}
   m_TileAnchor: {x: 0, y: -0.09, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
