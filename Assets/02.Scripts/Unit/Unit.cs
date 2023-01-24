@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public UnitInfo info;
-
-    protected Transform tr;
+    Transform tr;
 
     private void Awake()
     {
